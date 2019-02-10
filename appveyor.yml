@@ -16,7 +16,7 @@ install:
   - ps: Install-Product node $env:nodejs_version
 
 before_test:
-  - npm install eslint
+  - npm install -g eslint
   - npm install -g firebase-tools
 
 test_script:
