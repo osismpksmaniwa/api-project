@@ -17,6 +17,7 @@ install:
 
 before_test:
   - npm install -g eslint
+  - npm install -g eslint-plugin-promise@latest
   - npm install -g firebase-tools
 
 test_script:
