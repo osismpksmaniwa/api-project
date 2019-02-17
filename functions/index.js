@@ -3,7 +3,7 @@ const express = require('express');
 const app = require(express);
 
 app.get('/api', (req, res) => {
-    res.sendFile('views/api-list.html', {root:__dirame})
+    res.sendFile('views/api-list.html', {root:__dirname})
 });
 
 app.get('/linkshortner', (req, res) => {
