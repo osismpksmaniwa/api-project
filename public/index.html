@@ -85,7 +85,8 @@
         auth.signInWithEmailAndPassword(username.value, password.value)
         .then(function(data){
             alert("---LOGIN SUCCES---")
-            console.log(data);
+			console.log(data);
+			window.location.replace("https://api.osismpksmaniwa.web.id/api")
         }).catch(function(err){
             console.log(err)
         })
