@@ -6,27 +6,14 @@
 [ FONT ]*/
 
 @font-face {
-  font-family: Poppins-Regular;
-  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
+  font-family: Ubuntu-Regular;
+  src: url('../fonts/ubuntu/Ubuntu-Regular.ttf'); 
 }
 
 @font-face {
-  font-family: Poppins-Medium;
-  src: url('../fonts/poppins/Poppins-Medium.ttf'); 
+  font-family: Ubuntu-Bold;
+  src: url('../fonts/ubuntu/Ubuntu-Bold.ttf'); 
 }
-
-@font-face {
-  font-family: Poppins-Bold;
-  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
-}
-
-@font-face {
-  font-family: Poppins-SemiBold;
-  src: url('../fonts/poppins/Poppins-SemiBold.ttf'); 
-}
-
-
-
 
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
@@ -39,12 +26,12 @@
 
 body, html {
 	height: 100%;
-	font-family: Poppins-Regular, sans-serif;
+	font-family: Ubuntu-Regular, sans-serif;
 }
 
 /*---------------------------------------------*/
 a {
-	font-family: Poppins-Regular;
+	font-family: Ubuntu-Regular;
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -61,7 +48,7 @@ a:focus {
 
 a:hover {
 	text-decoration: none;
-  color: #333333;
+  color: #403866;
 }
 
 /*---------------------------------------------*/
@@ -70,7 +57,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-	font-family: Poppins-Regular;
+	font-family: Ubuntu-Regular;
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -98,25 +85,20 @@ textarea:focus, input:focus {
   border-color: transparent !important;
 }
 
-input:focus::-webkit-input-placeholder { color:transparent; }
-input:focus:-moz-placeholder { color:transparent; }
-input:focus::-moz-placeholder { color:transparent; }
-input:focus:-ms-input-placeholder { color:transparent; }
+input::-webkit-input-placeholder { color: #8f8fa1;}
+input:-moz-placeholder { color: #8f8fa1;}
+input::-moz-placeholder { color: #8f8fa1;}
+input:-ms-input-placeholder { color: #8f8fa1;}
 
-textarea:focus::-webkit-input-placeholder { color:transparent; }
-textarea:focus:-moz-placeholder { color:transparent; }
-textarea:focus::-moz-placeholder { color:transparent; }
-textarea:focus:-ms-input-placeholder { color:transparent; }
+textarea::-webkit-input-placeholder { color: #8f8fa1;}
+textarea:-moz-placeholder { color: #8f8fa1;}
+textarea::-moz-placeholder { color: #8f8fa1;}
+textarea:-ms-input-placeholder { color: #8f8fa1;}
 
-input::-webkit-input-placeholder { color: #adadad;}
-input:-moz-placeholder { color: #adadad;}
-input::-moz-placeholder { color: #adadad;}
-input:-ms-input-placeholder { color: #adadad;}
-
-textarea::-webkit-input-placeholder { color: #adadad;}
-textarea:-moz-placeholder { color: #adadad;}
-textarea::-moz-placeholder { color: #adadad;}
-textarea:-ms-input-placeholder { color: #adadad;}
+label {
+  display: block;
+  margin: 0;
+}
 
 /*---------------------------------------------*/
 button {
@@ -137,18 +119,13 @@ iframe {
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 .txt1 {
-  font-family: Poppins-Regular;
-  font-size: 15px;
-  color: #999999;
-  line-height: 1.5;
+  font-family: Ubuntu-Regular;
+  font-size: 16px;
+  color: #827ffe;
+  line-height: 1.4;
 }
 
-.txt2 {
-  font-family: Poppins-Regular;
-  font-size: 15px;
-  color: #57b846;
-  line-height: 1.5;
-}
+
 
 /*//////////////////////////////////////////////////////////////////
 [ login ]*/
@@ -170,16 +147,22 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #fff;  
+  
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;;
 }
+
 
 .wrap-login100 {
   width: 390px;
   background: #fff;
+  border-radius: 10px;
+  position: relative;
 }
 
 
-/*------------------------------------------------------------------
+/*==================================================================
 [ Form ]*/
 
 .login100-form {
@@ -187,26 +170,18 @@ iframe {
 }
 
 .login100-form-title {
-  display: block;
-  font-family: Poppins-Bold;
-  font-size: 39px;
-  color: #333333;
+  font-family: Ubuntu-Bold;
+  font-size: 30px;
+  color: #403866;
   line-height: 1.2;
+  text-transform: uppercase;
   text-align: center;
-}
 
-.login100-form-avatar {
-  display: block;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-.login100-form-avatar img {
   width: 100%;
+  display: block;
 }
+
+
 
 /*------------------------------------------------------------------
 [ Input ]*/
@@ -214,86 +189,126 @@ iframe {
 .wrap-input100 {
   width: 100%;
   position: relative;
-  border-bottom: 2px solid #d9d9d9;
+  background-color: #e6e6e6;
+  border: 1px solid transparent;
+  border-radius: 3px;
 }
 
+
+/*---------------------------------------------*/
 .input100 {
-  font-family: Poppins-SemiBold;
-  font-size: 18px;
-  color: #555555;
+  font-family: Ubuntu-Bold;
+  color: #403866;
   line-height: 1.2;
+  font-size: 18px;
 
   display: block;
   width: 100%;
-  height: 52px;
   background: transparent;
-  padding: 0 5px;
+  height: 62px;
+  padding: 0 20px 0 38px;
 }
+/*------------------------------------------------------------------
+[ Focus Input ]*/
 
-/*---------------------------------------------*/ 
 .focus-input100 {
   position: absolute;
   display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
   pointer-events: none;
-}
+  border: 1px solid #827ffe;
+  border-radius: 3px;
 
-.focus-input100::before {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
+  visibility: hidden;
+  opacity: 0;
 
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 
-  background: #57b846;
+  -webkit-transform: scaleX(1.1) scaleY(1.3);
+  -moz-transform: scaleX(1.1) scaleY(1.3);
+  -ms-transform: scaleX(1.1) scaleY(1.3);
+  -o-transform: scaleX(1.1) scaleY(1.3);
+  transform: scaleX(1.1) scaleY(1.3);
 }
 
-.focus-input100::after {
-  font-family: Poppins-Medium;
-  font-size: 18px;
+.input100:focus + .focus-input100 {
+  visibility: visible;
+  opacity: 1;
+
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+.eff-focus-selection {
+  visibility: visible;
+  opacity: 1;
+
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+
+/*==================================================================
+[ Restyle Checkbox ]*/
+
+.input-checkbox100 {
+  display: none;
+}
+
+.label-checkbox100 {
+  font-family: Ubuntu-Regular;
+  font-size: 16px;
   color: #999999;
   line-height: 1.2;
 
-  content: attr(data-placeholder);
   display: block;
-  width: 100%;
+  position: relative;
+  padding-left: 26px;
+  cursor: pointer;
+}
+
+.label-checkbox100::before {
+  content: "\f00c";
+  font-family: FontAwesome;
+  font-size: 13px;
+  color: transparent;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 15px;
-  left: 0px;
-  padding-left: 5px;
-
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  background: #fff;
+  border: 2px solid #827ffe;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
-.input100:focus + .focus-input100::after {
-  top: -20px;
-  font-size: 15px;
-}
-
-.input100:focus + .focus-input100::before {
-  width: 100%;
-}
-
-.has-val.input100 + .focus-input100::after {
-  top: -20px;
-  font-size: 15px;
-}
-
-.has-val.input100 + .focus-input100::before {
-  width: 100%;
+.input-checkbox100:checked + .label-checkbox100::before {
+  color: #827ffe;
 }
 
 
@@ -307,11 +322,10 @@ iframe {
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .login100-form-btn {
-  font-family: Poppins-Medium;
+  font-family: Ubuntu-Bold;
   font-size: 16px;
   color: #fff;
   line-height: 1.2;
@@ -326,15 +340,9 @@ iframe {
   align-items: center;
   padding: 0 20px;
   width: 100%;
-  height: 50px;
-  background-color: #57b846;
-  border-radius: 25px;
-
-  box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
-  -moz-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
-  -webkit-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
-  -o-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
-  -ms-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
+  height: 62px;
+  background-color: #827ffe;
+  border-radius: 3px;
 
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -342,15 +350,9 @@ iframe {
   transition: all 0.4s;
 }
 
-.login100-form-btn:hover  {
-  background-color: #333333;
-  box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
-  -moz-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
-  -webkit-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
-  -o-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
-  -ms-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+.login100-form-btn:hover {
+  background-color: #403866;
 }
-
 
 
 /*------------------------------------------------------------------
@@ -366,20 +368,20 @@ iframe {
   max-width: 70%;
   background-color: #fff;
   border: 1px solid #c80000;
-  border-radius: 2px;
-  padding: 4px 25px 4px 10px;
+  border-radius: 3px;
+  padding: 4px 25px 5px 10px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  right: 0px;
+  right: 12px;
   pointer-events: none;
 
-  font-family: Poppins-Regular;
+  font-family: Ubuntu-Regular;
   color: #c80000;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.4;
   text-align: left;
 
@@ -393,21 +395,19 @@ iframe {
 }
 
 .alert-validate::after {
-  content: "\f06a";
+  content: "\f12a";
   font-family: FontAwesome;
-  font-size: 16px;
-  color: #c80000;
-
   display: block;
   position: absolute;
-  background-color: #fff;
+  color: #c80000;
+  font-size: 18px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  right: 5px;
+  right: 18px;
 }
 
 .alert-validate:hover:before {
@@ -424,25 +424,4 @@ iframe {
 
 
 /*//////////////////////////////////////////////////////////////////
-[ Login more ]*/
-.login-more li {
-  position: relative;
-  padding-left: 16px;
-}
-
-.login-more li::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: #cccccc;
-  top: 45%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  left: 0;
-}
+[ Responsive ]*/
