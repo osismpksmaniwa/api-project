@@ -78,9 +78,9 @@ public/utilities-border.html
 public/utilities-color.html
 public/utilities-other.html
 public/readme.md
-public/
 public/LICENSE
 public/package-lock.json
 public/package.json
 public/gulpfile.js
 public/.travis.yml
+public/form/test-area
